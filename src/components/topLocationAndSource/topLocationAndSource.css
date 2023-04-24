@@ -1,6 +1,6 @@
 .top_location_and_source_main {
   width: 100%;
-  padding: 24px 24px 44px 24px;
+  padding: 24px 14px;
   background: #ffffff;
   border: 1px solid #eff1f6;
   border-radius: 12px;
@@ -25,5 +25,10 @@
 @media (min-width: 768px) {
     .top_location_and_source_main {
         margin-top: 0px;
+      }
+      .top_location_and_source_main {
+  
+        padding: 24px 24px 44px 24px;
+     
       }
 }

@@ -68,7 +68,20 @@ const PieChartMain = () => {
             position: 'left',
             offsetY: 0,
             height: 230,
-          }
+            zIndex:1,
+          },
+          markers: {
+            width: 15,
+            height: 15,
+            strokeWidth: 0,
+            strokeColor: 'purple',
+            // fillColors: undefined,
+            radius: 12,
+            // customHTML: undefined,
+            // onClick: undefined,
+            offsetX: 8,
+            offsetY: 0
+        },
         }}
       />
     </div>

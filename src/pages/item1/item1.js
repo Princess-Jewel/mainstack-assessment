@@ -2,7 +2,7 @@ import React from 'react'
 
 const Item1 = () => {
   return (
-    <div className='dashboard_main'>Item 1</div>
+    <div>Item 1</div>
   )
 }
 

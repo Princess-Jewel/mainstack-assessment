@@ -8,4 +8,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Söhne';
+  background-color: #fff;
+}
+.apexcharts-legend-marker {
+  z-index: 1 !important;
 }

@@ -2,11 +2,15 @@
 .outlet{
     height:100%;
     width:100%;
+    padding: 22px 30px 22px;
 }
 .desktop_view{
     display: flex;
 }
 
 @media (min-width: 768px) {
-
+    .outlet{
+        padding: 22px 60px 44px;
+       
+    }
 }
