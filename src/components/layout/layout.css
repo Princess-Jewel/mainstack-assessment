@@ -1,0 +1,13 @@
+
+.outlet{
+    padding-right: 304px;
+    height:100%;
+    width:100%;
+}
+.desktop_view{
+    display: flex;
+}
+
+@media (min-width: 768px) {
+
+}

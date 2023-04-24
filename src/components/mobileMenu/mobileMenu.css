@@ -1,0 +1,8 @@
+.mobile_menu{
+    display: block;
+}
+@media (min-width: 768px) {
+    .mobile_menu{
+        display: none;
+    }
+  }
