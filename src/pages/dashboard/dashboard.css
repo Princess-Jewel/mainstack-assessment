@@ -1,0 +1,45 @@
+.dashboard_main {
+  padding: 22px 60px 44px;
+}
+
+.dashboard_heading {
+  font-size: 1.25rem;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+  color: #131316;
+  padding-bottom: 22px;
+}
+
+.sub_navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-top: 24px;
+}
+
+.welcome_text h2 {
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  color: #131316;
+}
+
+.welcome_text p {
+  font-size: 0.875rem;
+  line-height: 22px;
+  color: #31373d;
+}
+.analytics {
+  font-size: 0.875rem;
+  line-height: 22px;
+  color: #ff5403;
+  padding-top: 46px;
+  cursor: pointer;
+}

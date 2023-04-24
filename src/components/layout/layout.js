@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../navbar/navbar";
 import MobileMenu from "../mobileMenu/mobileMenu";
@@ -6,7 +6,7 @@ import Sidebar from "../sidebar/sidebar";
 import "./layout.css";
 
 const Layout = () => {
-  const [showSideBar, setShowSideBar] = useState(false);
+  // const [showSideBar, setShowSideBar] = useState(false);
   return (
     <>
       {/* {showSideBar ? (
