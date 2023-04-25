@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./tooltip.css";
 
-const Tooltip = ({delay, content, direction, children}) => {
+const Tooltip = ({ delay, content, direction, children }) => {
   let timeout;
   const [active, setActive] = useState(false);
 

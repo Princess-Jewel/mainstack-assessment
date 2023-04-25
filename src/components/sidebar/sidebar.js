@@ -33,7 +33,7 @@ export default function Sidebar() {
         </div>
 
         <div className="sidebar_navigation">
-          <p className="sidebar_title">OTHERS 1</p>
+          <p className="sidebar_title">OTHERS 2</p>
           {DASHBOARD_SIDEBAR_THIRD_ITEM.map(link => (
             <SidebarLink key={link.key} link={link} />
           ))}

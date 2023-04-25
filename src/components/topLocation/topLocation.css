@@ -6,10 +6,16 @@
   border-radius: 12px;
   margin-top: 24px;
 }
-.top_location_and_source_main_header,
-.piechart_and_details {
+.top_location_and_source_main_header{
   display: flex;
   justify-content: space-between;
+}
+
+.piechart_and_details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%!important;
 }
 .top_location_and_source_main h2 {
   font-size: 1.125rem;
@@ -17,18 +23,16 @@
   letter-spacing: -0.015em;
   color: #131316;
 }
-.top_location_and_source_main p{
+.top_location_and_source_main p {
   font-size: 0.875rem;
   line-height: 22px;
   color: #ff5403;
 }
 @media (min-width: 768px) {
-    .top_location_and_source_main {
-        margin-top: 0px;
-      }
-      .top_location_and_source_main {
-  
-        padding: 24px 24px 44px 24px;
-     
-      }
+  .top_location_and_source_main {
+    margin-top: 0px;
+  }
+  .top_location_and_source_main {
+    padding: 24px 24px 44px 24px;
+  }
 }

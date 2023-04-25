@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AreaChartMain from "../charts/areaChartMain";
 import Tooltip from "../tooltip/tooltip";
-import TopLocationAndSource from "../topLocationAndSource/topLocationAndSource";
+import TopLocation from "../topLocation/topLocation";
+import TopSource from "../topSource/topSource";
 import "./pageView.css";
 
 const DEFAULT_DATES = [
@@ -17,6 +18,53 @@ const PageView = () => {
   const [currentDate, setCurrentDate] = useState("All Time");
   const [elements] = useState(DEFAULT_DATES);
   const [selectedID, setSelectedID] = useState(5);
+  const [topLocation, setTopLocation] = useState([]);
+  const [topLocationCount, setTopLocationCount] = useState([]);
+  const [topSource, setTopSource] = useState([]);
+  const [topSourceCount, setTopSourceCount] = useState([]);
+
+  function getflags(country) {
+    switch (country.toLowerCase()) {
+      case "nigeria":
+        return ` 🇳🇬 ${country}`;
+      case "germany":
+        return ` 🇩🇪 ${country}`;
+      case "ghana":
+        return ` 🇬🇭 ${country}`;
+      case "finland":
+        return ` 🇫🇮 ${country}`;
+      case "united kingdom":
+        return ` 🇬🇧 ${country}`;
+      default:
+        break;
+    }
+  }
+
+  useEffect(() => {
+    const getData = async () => {
+      const reqData = await fetch("https://fe-task-api.mainstack.io/");
+      const resData = await reqData.json();
+      const topLocationCountry_arr = [];
+      const topLocationCount_arr = [];
+      const topSource_arr = [];
+      const topSourceCount_arr = [];
+      resData.top_locations.forEach(element => {
+        topLocationCount_arr.push(element.count);
+        return topLocationCountry_arr.push(
+          getflags(element.country) + " " + element.percent + "%"
+        );
+      });
+      resData.top_sources.forEach(element => {
+        topSourceCount_arr.push(element.count);
+        return topSource_arr.push(element.source + " " + element.percent + "%");
+      });
+      setTopLocation(topLocationCountry_arr);
+      setTopLocationCount(topLocationCount_arr);
+      setTopSource(topSource_arr);
+      setTopSourceCount(topSourceCount_arr);
+    };
+    getData();
+  }, []);
 
   const handleClick = el => {
     setSelectedID(el.id);
@@ -28,7 +76,6 @@ const PageView = () => {
   return (
     <div className="page_view_main">
       <ul>
-        {/* <div id="elements-container"> */}
         {elements.map(el => (
           <li
             key={el.id}
@@ -38,7 +85,6 @@ const PageView = () => {
             {el.value}
           </li>
         ))}
-        {/* </div> */}
       </ul>
 
       {/* CHART SECTION*/}
@@ -65,8 +111,16 @@ const PageView = () => {
 
       {/* TOP LOCATION AND SOURCE */}
       <div className="location_and_source">
-        <TopLocationAndSource title="Top Locations" />
-        <TopLocationAndSource title="Top Referral Source" />
+        <TopLocation
+          title="Top Locations"
+          topLocation={topLocation}
+          topLocationCount={topLocationCount}
+        />
+        <TopSource
+          title="Top Referral Source"
+          topSource={topSource}
+          topSourceCount={topSourceCount}
+        />
       </div>
     </div>
   );
