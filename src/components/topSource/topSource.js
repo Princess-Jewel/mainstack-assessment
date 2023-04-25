@@ -34,6 +34,8 @@ const TopSource = ({ title, topSource, topSourceCount }) => {
             offsetX: 8,
             offsetY: 0
         },
+        tooltip: {
+          enabled: false}
         }}
       />
       </div>

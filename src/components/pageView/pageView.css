@@ -26,7 +26,7 @@
   background: #ffffff;
   border: 1px solid #eff1f6;
   border-radius: 100px;
-  white-space:nowrap;
+  white-space: nowrap;
   cursor: pointer;
 }
 .selectedDate {
@@ -84,13 +84,14 @@
 }
 
 @media (min-width: 768px) {
-    .location_and_source {
-        /* display: flex; */
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 16px;
-      }
-      .location_and_source{
-        margin-top: 24px;
-    }
+  .location_and_source {
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .location_and_source {
+    flex-direction: row;
+  }
 }

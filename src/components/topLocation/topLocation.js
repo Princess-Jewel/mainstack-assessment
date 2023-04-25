@@ -34,6 +34,8 @@ const TopLocation = ({ title, topLocation, topLocationCount }) => {
             offsetX: 8,
             offsetY: 0
         },
+        tooltip: {
+          enabled: false}
         }}
       />
       </div>

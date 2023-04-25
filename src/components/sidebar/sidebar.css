@@ -1,8 +1,13 @@
 .sidebar_main {
-  width: 304px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 275px;
   height: 100%;
-  border-right: 1px solid #eff1f6;
+  border-right: 1px solid #EFF1F6;
   padding-top: 32px;
+  z-index: 100;
+
   /* padding-left: 54px; */
 }
 .desktop_logo {
@@ -74,6 +79,11 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
+}
+@media (min-width: 992px) {
+  .sidebar_main {
+    width: 304px;
+  }
 }
 @media (max-width: 768px) {
   .sidebar_main {

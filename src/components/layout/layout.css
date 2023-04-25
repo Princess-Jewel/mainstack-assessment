@@ -1,16 +1,27 @@
-
-.outlet{
-    height:100%;
-    width:100%;
-    padding: 22px 30px 22px;
+.outlet {
+  height: 100%;
+  width: 100%;
+  padding: 22px 30px 22px;
 }
-.desktop_view{
-    display: flex;
+.desktop_view {
+  display: flex;
 }
+/* @media (max-width: 768px) {
+  .outlet {
+    max-width: calc(100% - 275px);
+  }
+} */
 
 @media (min-width: 768px) {
-    .outlet{
-        padding: 22px 60px 44px;
-       
-    }
+  .outlet {
+    padding: 22px 60px 44px;
+    max-width: calc(100% - 275px);
+    margin-left: auto;
+  }
+}
+@media (min-width: 992px) {
+  .outlet {
+    max-width: calc(100% - 304px);
+  
+  }
 }
