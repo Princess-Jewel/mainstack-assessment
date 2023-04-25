@@ -22,6 +22,7 @@ const PageView = () => {
   const [topLocationCount, setTopLocationCount] = useState([]);
   const [topSource, setTopSource] = useState([]);
   const [topSourceCount, setTopSourceCount] = useState([]);
+  const [totalViews, setTotalViews] = useState(0);
 
   function getflags(country) {
     switch (country.toLowerCase()) {
@@ -48,6 +49,11 @@ const PageView = () => {
       const topLocationCount_arr = [];
       const topSource_arr = [];
       const topSourceCount_arr = [];
+
+      // GET THE TOTAL NUMBER OF VIEWS
+      let result = Object.values(resData.graph_data.views).reduce((a, b) => {
+        return a + b;
+      });
       resData.top_locations.forEach(element => {
         topLocationCount_arr.push(element.count);
         return topLocationCountry_arr.push(
@@ -62,6 +68,7 @@ const PageView = () => {
       setTopLocationCount(topLocationCount_arr);
       setTopSource(topSource_arr);
       setTopSourceCount(topSourceCount_arr);
+      setTotalViews(result);
     };
     getData();
   }, []);
@@ -93,7 +100,7 @@ const PageView = () => {
           <div className="page_view_and_number">
             <h3>Page Views</h3>
             <p className="time">{`${currentDate}`}</p>
-            <h2 className="date">500</h2>
+            <h2 className="date">{`${totalViews}`}</h2>
           </div>
 
           <Tooltip content="My tooltip!" direction="bottom" delay="4">
