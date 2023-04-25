@@ -4,10 +4,10 @@ import {
   DASHBOARD_SIDEBAR_SECOND_ITEM,
   DASHBOARD_SIDEBAR_THIRD_ITEM,
 } from "../lib/navigation";
-import {NavLink } from "react-router-dom";
 import "./sidebar.css";
+import SidebarLink from "./sidebarLink";
 
-export default function Sidebar() {
+const Sidebar = () => {
   return (
     <div className="sidebar_main">
       {/* Logo */}
@@ -62,17 +62,4 @@ export default function Sidebar() {
   );
 }
 
-function SidebarLink({ link }) {
-  return (
-    <NavLink
-      to={link.path}
-      className="sidebarLink"
-    >
-      <div className="sidebar_icon">
-        <img src={link.icon} alt={link.label} />
-      </div>
-      {link.label}
-    </NavLink>
-  );
-}
-
+export default Sidebar
