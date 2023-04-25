@@ -35,7 +35,7 @@ const AreaChartMain = () => {
         options={{
           dataLabels: { enabled: false },
           colors: ["#FF5403"],
-          stroke: { width: 3, curve: "straight" },
+          stroke: { width: 2, curve: "straight" },
           fill: {
             type: "gradient",
             gradient: {

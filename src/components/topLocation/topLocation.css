@@ -27,6 +27,7 @@
   font-size: 0.875rem;
   line-height: 22px;
   color: #ff5403;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .top_location_and_source_main {

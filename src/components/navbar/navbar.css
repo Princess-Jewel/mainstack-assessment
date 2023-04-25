@@ -1,7 +1,27 @@
-.navbar_main {
+.navbar {
   display: block;
 }
-
+.navbar_main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 30px 22px;
+}
+.cancel_button{
+  cursor: pointer;
+  color: #000;
+}
+.hamburger,
+.brand_logo{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.hamburger img,
+.brand_logo img{
+  width: 100%;
+  height: 100%;
+}
 @media (min-width: 768px) {
   .navbar_main {
     display: none;
