@@ -4,18 +4,15 @@
   left: 0;
   width: 275px;
   height: 100%;
-  border-right: 1px solid #EFF1F6;
+  border-right: 1px solid #eff1f6;
   padding-top: 32px;
   z-index: 100;
-
-  /* padding-left: 54px; */
 }
 .desktop_logo {
   width: 40px;
   height: 40px;
   margin-bottom: 38px;
   margin-left: 54px;
-  /* padding-left: 54px; */
 }
 .desktop_logo img,
 .sidebar_icon img,
@@ -80,13 +77,32 @@
   height: 20px;
   cursor: pointer;
 }
+.sidebar_main.openedSidebar {
+  display: block;
+  background-color: #ff5403;
+}
+
 @media (min-width: 992px) {
   .sidebar_main {
     width: 304px;
   }
 }
 @media (max-width: 768px) {
+  .sidebarLink {
+    padding-left: 30px;
+  }
   .sidebar_main {
+    padding-top: 22px;
     display: none;
+  }
+  .desktop_logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+  }
+  .sidebarLink.active,
+  .sidebarLink:hover {
+    color: #fff;
+    border-left: 2px solid #fff;
   }
 }

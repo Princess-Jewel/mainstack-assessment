@@ -2,13 +2,14 @@
   font-family: 'Söhne';
   src: url(./font/Söhne-Font-Family-Collection/Test-Söhne/TestSöhne-Buch.otf);
 }
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Söhne';
-  background-color: #fff;
+}
+html {
+  scroll-behavior: smooth;
 }
 .apexcharts-legend-marker {
   z-index: 1 !important;

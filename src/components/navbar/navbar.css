@@ -10,12 +10,20 @@
 .cancel_button{
   cursor: pointer;
   color: #000;
+  font-size:1.875rem;
 }
-.hamburger,
 .brand_logo{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+}
+.hamburger{
+  cursor: pointer;
+  height: 40px;
+  transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+  user-select: none;
+  width: 40px;
+  outline: none;
 }
 .hamburger img,
 .brand_logo img{

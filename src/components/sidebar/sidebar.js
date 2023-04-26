@@ -7,9 +7,9 @@ import {
 import "./sidebar.css";
 import SidebarLink from "./sidebarLink";
 
-const Sidebar = () => {
+const Sidebar = ({ showSideBar }) => {
   return (
-    <div className="sidebar_main">
+    <div className={`sidebar_main ${showSideBar ? "openedSidebar" : ""}`}>
       {/* Logo */}
       <div className="desktop_logo">
         <img
@@ -60,6 +60,6 @@ const Sidebar = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Sidebar
+export default Sidebar;

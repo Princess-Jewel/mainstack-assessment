@@ -13,7 +13,7 @@ const TopLocation = ({ title, topLocation, topLocationCount }) => {
       <div className="piechart_and_details">
       <Chart
         type="donut"
-        width={350}
+        width={300}
         height={550}
         series={topLocationCount}
         options={{

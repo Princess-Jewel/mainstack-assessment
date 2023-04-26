@@ -13,7 +13,7 @@ const TopSource = ({ title, topSource, topSourceCount }) => {
       <div className="piechart_and_details">
       <Chart
         type="donut"
-        width={350}
+        width={300}
         height={550}
         series={topSourceCount}
         options={{
@@ -35,8 +35,24 @@ const TopSource = ({ title, topSource, topSourceCount }) => {
             offsetY: 0
         },
         tooltip: {
-          enabled: false}
+          enabled: false},
+          // responsive: [
+          //   {
+          //     breakpoint: 768,
+          //     options: {
+          //       plotOptions: {
+          //         bar: {
+          //           horizontal: false
+          //         }
+          //       },
+          //       legend: {
+          //         position: "bottom"
+          //       }
+          //     }
+          //   }
+          // ]
         }}
+        
       />
       </div>
     </div>

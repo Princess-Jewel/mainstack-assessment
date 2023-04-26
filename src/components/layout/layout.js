@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../navbar/navbar";
-// import MobileMenu from "../mobileMenu/mobileMenu";
 import Sidebar from "../sidebar/sidebar";
 import "./layout.css";
 
@@ -10,10 +9,10 @@ const Layout = () => {
   return (
     <>
       <div className="mobile_view">
-      <Navbar showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
+        <Navbar showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
       </div>
       <div className="desktop_view">
-          <Sidebar />
+        <Sidebar showSideBar={showSideBar} />
         <div className="outlet">
           <Outlet />
         </div>

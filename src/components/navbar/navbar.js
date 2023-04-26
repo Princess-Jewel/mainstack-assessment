@@ -3,7 +3,7 @@ import "./navbar.css";
 
 const Navbar = ({ showSideBar, setShowSideBar }) => {
   return (
-    <nav className="navbar">
+    <nav className="navbar ">
       <div className="navbar_main">
         <div className="brand_logo">
           <img
