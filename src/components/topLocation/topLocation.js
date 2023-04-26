@@ -1,7 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
 import "./topLocation.css";
-
 const TopLocation = ({ title, topLocation, topLocationCount }) => {
   return (
     <div className="top_location_and_source_main">
@@ -9,11 +8,10 @@ const TopLocation = ({ title, topLocation, topLocationCount }) => {
         <h2>{title}</h2>
         <p>View full reports</p>
       </div>
-
       <div className="piechart_and_details">
       <Chart
         type="donut"
-        width={300}
+        width={350}
         height={550}
         series={topLocationCount}
         options={{
@@ -42,5 +40,4 @@ const TopLocation = ({ title, topLocation, topLocationCount }) => {
     </div>
   );
 };
-
 export default TopLocation;
