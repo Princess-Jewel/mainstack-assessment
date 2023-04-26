@@ -9,33 +9,46 @@ const TopLocation = ({ title, topLocation, topLocationCount }) => {
         <p>View full reports</p>
       </div>
       <div className="piechart_and_details">
-      <Chart
-        type="donut"
-        width={350}
-        height={550}
-        series={topLocationCount}
-        options={{
-          labels: topLocation ,
-          dataLabels: { enabled: false },
-          legend: {
-            position: 'left',
-            offsetY: 0,
-            height: 230,
-            zIndex:1,
-          },
-          markers: {
-            width: 15,
-            height: 15,
-            strokeWidth: 0,
-            strokeColor: 'purple',
-            radius: 12,
-            offsetX: 8,
-            offsetY: 0
-        },
-        tooltip: {
-          enabled: false}
-        }}
-      />
+        <Chart
+          type="donut"
+          width={400}
+          height={550}
+          series={topLocationCount}
+          options={{
+            labels: topLocation,
+            dataLabels: { enabled: false },
+            legend: {
+              position: "left",
+              offsetY: 0,
+              height: 230,
+              zIndex: 1,
+            },
+            markers: {
+              width: 15,
+              height: 15,
+              strokeWidth: 0,
+              strokeColor: "purple",
+              radius: 12,
+              offsetX: 8,
+              offsetY: 0,
+            },
+            tooltip: {
+              enabled: true,
+            },
+                    
+                          
+            responsive: [
+              {
+                breakpoint: 500,
+                options: {
+                  chart: {
+                    width: 330,
+                  },
+                },
+              },
+            ],
+          }}
+        />
       </div>
     </div>
   );
